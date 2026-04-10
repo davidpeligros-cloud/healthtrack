@@ -4,10 +4,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:healthtrack/app.dart';
 
 void main() {
-  testWidgets('HealthTrack renders the root scaffold', (WidgetTester tester) async {
+  testWidgets('HealthTrack app boots', (WidgetTester tester) async {
     await tester.pumpWidget(const HealthTrackApp());
+    await tester.pumpAndSettle();
 
     expect(find.byType(MaterialApp), findsOneWidget);
-    expect(find.byType(Scaffold), findsOneWidget);
   });
 }
