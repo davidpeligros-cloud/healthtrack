@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    match /users/{userId} {
+      allow read, update, delete: if isOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.email is string;
+      match /meals/{mealId} {
+        allow read, create, update, delete: if isOwner(userId);
+      }
+      match /weightLogs/{logId} {
+        allow read, create, update, delete: if isOwner(userId);
+      }
+      match /activities/{activityId} {
+        allow read, create, update, delete: if isOwner(userId);
+      }
+      match /customFoods/{foodId} {
+        allow read, create, update, delete: if isOwner(userId);
+      }
+    }
+    match /foods/{foodId} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "@@locale": "en",
+  "appTitle": "HealthTrack",
+  "home": "Home",
+  "diary": "Diary",
+  "progress": "Progress",
+  "settings": "Settings",
+  "breakfast": "Breakfast",
+  "lunch": "Lunch",
+  "dinner": "Dinner",
+  "snack": "Snack",
+  "caloriesRemaining": "remaining",
+  "caloriesOver": "over",
+  "scanBarcode": "Point camera at barcode",
+  "searchManually": "Search manually",
+  "errorScanningBarcode": "Error scanning barcode"
+}

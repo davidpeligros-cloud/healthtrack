@@ -1,0 +1,17 @@
+{
+  "@@locale": "ca",
+  "appTitle": "HealthTrack",
+  "home": "Inici",
+  "diary": "Diari",
+  "progress": "Progrés",
+  "settings": "Configuració",
+  "breakfast": "Esmorzar",
+  "lunch": "Dinar",
+  "dinner": "Sopar",
+  "snack": "Berenar",
+  "caloriesRemaining": "restants",
+  "caloriesOver": "excedides",
+  "scanBarcode": "Apunta la càmera al codi",
+  "searchManually": "Cercar manualment",
+  "errorScanningBarcode": "Error en escanejar"
+}
